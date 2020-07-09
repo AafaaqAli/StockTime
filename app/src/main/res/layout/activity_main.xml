@@ -19,12 +19,8 @@
         android:layout_marginBottom="5dp">
 
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
 
-            <TextView
+            <DigitalClock
                 android:id="@+id/textViewTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -34,15 +30,6 @@
                 android:textColor="@color/white"
                 android:textSize="12dp" />
 
-            <TextView
-                android:id="@+id/textViewDate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/comfortaa"
-                android:text="8 July 2020"
-                android:textColor="@color/white"
-                android:textSize="6dp" />
-        </LinearLayout>
 
 
         <ImageView

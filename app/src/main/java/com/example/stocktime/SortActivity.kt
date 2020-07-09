@@ -7,9 +7,13 @@ import android.view.View
 import com.example.stocks.StockApplicationClass
 
 class SortActivity : WearableActivity(), View.OnClickListener {
+    lateinit var networkingHelperClass: NetworkingHelperClass
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sorted)
+
+        networkingHelperClass = NetworkingHelperClass(applicationContext)
     }
 
     override fun onClick(view: View?) {
@@ -23,6 +27,7 @@ class SortActivity : WearableActivity(), View.OnClickListener {
 
         }else{
             /*startNetworking*/
+            networkingHelperClass.startJob()
         }
 
 
