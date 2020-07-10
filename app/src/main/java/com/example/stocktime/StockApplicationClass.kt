@@ -6,7 +6,6 @@ class StockApplicationClass : Application() {
     companion object {
         private var listOfStocks: MutableList<Stock> = arrayListOf()
         private var listOfSelectedStocks: MutableList<Stock> = arrayListOf()
-        private var listOfSortedStocks: MutableList<Stock> = arrayListOf()
 
         fun getStocksList(): MutableList<Stock> {
             return this.listOfStocks
@@ -19,35 +18,24 @@ class StockApplicationClass : Application() {
         fun removeStockItem(stock: Stock) {
             listOfStocks.remove(stock)
         }
+        fun addStockItem(stock: Stock){
+            listOfStocks.add(stock)
+        }
 
 
-        fun getSeletedStocksList(): MutableList<Stock> {
-            return this.listOfStocks
+        fun getSelectedStocksList(): MutableList<Stock> {
+            return this.listOfSelectedStocks
         }
 
         fun getSelectedStockItem(position: Int): Stock {
-            return this.listOfStocks[position]
+            return this.listOfSelectedStocks[position]
         }
 
         fun removeSelectedStockItem(stock: Stock) {
-            listOfStocks.remove(stock)
+            listOfSelectedStocks.remove(stock)
         }
-
-
-        fun getSortedStocksList(): MutableList<Stock> {
-            return this.listOfStocks
+        fun addSelectedStockItem(stock: Stock){
+            listOfSelectedStocks.add(stock)
         }
-
-        fun getSortedStockItem(position: Int): Stock {
-            return this.listOfStocks[position]
-        }
-
-        fun removeSortedStockItem(stock: Stock) {
-            listOfStocks.remove(stock)
-        }
-
-
     }
-
-
 }

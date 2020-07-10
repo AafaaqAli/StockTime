@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SortedDataActivity">
+    tools:context=".StocksActivity">
 
     <androidx.wear.widget.WearableRecyclerView
         android:id="@+id/recyclerViewSortedData"
@@ -12,7 +12,6 @@
         android:layout_height="match_parent" />
 
     <TextView
-        android:visibility="invisible"
         android:id="@+id/textViewSortedStocksItemNotAdded"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -20,6 +19,7 @@
         android:fontFamily="@font/comfortaa"
         android:text="@string/no_item_added"
         android:textColor="@color/white"
-        android:textSize="10dp" />
+        android:textSize="10dp"
+        android:visibility="invisible" />
 
 </RelativeLayout>

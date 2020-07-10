@@ -3,16 +3,14 @@ package com.example.stocktime
 import android.content.Intent
 import android.os.Bundle
 import android.support.wearable.activity.WearableActivity
-import android.util.Log
 import android.view.View
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.androidnetworking.AndroidNetworking
 import com.example.stocks.Constants
 import com.example.stocks.StockApplicationClass
+import com.jacksonandroidnetworking.JacksonParserFactory
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
+
 
 class MainActivity : WearableActivity() {
     lateinit var networkingHelperClass: NetworkingHelperClass
@@ -21,64 +19,60 @@ class MainActivity : WearableActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        AndroidNetworking.initialize(applicationContext);
+        if(HelperClass.isInternetAvailable(this)){
+            AndroidNetworking.initialize(applicationContext);
+            AndroidNetworking.setParserFactory(JacksonParserFactory())
+
+        }
         networkingHelperClass = NetworkingHelperClass(this)
         Constants.Context = applicationContext
 
+        if (HelperClass.isInternetAvailable(this)) {
+            if (!Constants.isFirstRun) {
+                if (StockApplicationClass.getSelectedStocksList().isNotEmpty()) {
+                    textViewItemsNotFound.setText(R.string.no_item_added)
+                    textViewItemsNotFound.visibility = View.INVISIBLE
+                    networkingHelperClass.startJob()
 
-
-        if (!Constants.isFirstRun) {
-            if (StockApplicationClass.getSeletedStocksList().isNotEmpty()) {
-                textViewItemsNotFound.setText(R.string.no_item_added)
-                textViewItemsNotFound.visibility = View.VISIBLE
-                networkingHelperClass.startJob()
-                initAdapter()
+                    initAdapter()
+                } else {
+                    textViewItemsNotFound.setText(R.string.no_item_added)
+                    textViewItemsNotFound.visibility = View.VISIBLE
+                    NetworkOperations().startNetworkRequest()
+                }
             } else {
-                NetworkOperations().startNetworkRequest()
-            }
-        } else {
-            if (StockApplicationClass.getSeletedStocksList().isEmpty()) {
-                Constants.isFirstRun = true
-                NetworkOperations().startNetworkRequest()
-                textViewItemsNotFound.setText(R.string.no_item)
-                textViewItemsNotFound.visibility = View.VISIBLE
+                if (StockApplicationClass.getSelectedStocksList().isEmpty()) {
+                    Constants.isFirstRun = true
+                    NetworkOperations().startNetworkRequest()
+                    textViewItemsNotFound.setText(R.string.no_item)
+                    textViewItemsNotFound.visibility = View.VISIBLE
+                }
             }
         }
-
-        /*start Job*/
-        if (StockApplicationClass.getStocksList().isEmpty()) {
-            if (!HelperClass.isJobServiceOn(applicationContext)) {
-                networkingHelperClass.startJob()
-            } else {
-                Log.d("networkingServiceLog", "MainActivity: Job service already running")
-            }
-
-        } else {
-            /*show data*/
-            initAdapter()
-        }
-
         openSetting()
-
     }
 
 
     private fun openSetting() {
         imageViewSetting.setOnClickListener {
-            startActivity(Intent(this, SortActivity::class.java))
+            startActivity(Intent(this, StocksActivity::class.java))
         }
     }
 
 
     private fun initAdapter() {
         /*set adapter here*/
+        recyclerViewSelectedStock.layoutManager = LinearLayoutManager(this)
+        recyclerViewSelectedStock.adapter = SelectedStockAdapter(
+            this,
+            StockApplicationClass.getSelectedStocksList())
     }
 
     override fun onResume() {
         super.onResume()
-        if (StockApplicationClass.getSeletedStocksList().isNotEmpty()) {
+        if (StockApplicationClass.getSelectedStocksList().isNotEmpty()) {
             textViewItemsNotFound.visibility = View.INVISIBLE
-            /*InitAdapter here*/
+            initAdapter()
 
         } else {
             /*Show No Data found*/

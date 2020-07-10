@@ -19,17 +19,15 @@
         android:layout_marginBottom="5dp">
 
 
-
-            <DigitalClock
-                android:id="@+id/textViewTime"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/comfortaa"
-                android:gravity="center_vertical"
-                android:text="12:18PM"
-                android:textColor="@color/white"
-                android:textSize="12dp" />
-
+        <DigitalClock
+            android:id="@+id/textViewTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comfortaa"
+            android:gravity="center_vertical"
+            android:text="12:18PM"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
 
 
         <ImageView
@@ -43,6 +41,7 @@
     </RelativeLayout>
 
     <androidx.wear.widget.WearableRecyclerView
+        android:id="@+id/recyclerViewSelectedStock"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/relativeLayoutTimeAndSetting"
