@@ -16,47 +16,49 @@ import org.json.JSONObject
 class NetworkOperations {
     fun startNetworkRequest() {
         Log.d(
-            "networkingServiceLog",
-            "RequestJobService: Job service running, Network Request Started"
+                "networkingServiceLog",
+                "NetworkOperation:  Network Request Started"
         )
         GlobalScope.launch(Dispatchers.IO) {
-            Constants.SYMBOL_LIST.forEach { symbol ->
+            StockApplicationClass.emptyStockItem()
+            Log.d("networkingServiceLog", "Size of SelectedRawList: " + StockApplicationClass.getSelectedRowStocksList().size)
+            StockApplicationClass.getSelectedRowStocksList().forEach { rawStock ->
                 AndroidNetworking.get(" https://finnhub.io/api/v1/quote?symbol={symbol}&token={token}")
-                    .addPathParameter("symbol", symbol)
-                    .addPathParameter("token", Constants.API_TOKEN)
-                    .setPriority(Priority.HIGH)
-                    .build()
-                    .getAsJSONObject(object : JSONObjectRequestListener {
-                        override fun onResponse(response: JSONObject?) {
-                            StockApplicationClass.addStockItem(
-                                Stock(
-                                    false,
-                                    symbol,
-                                    response!!.getString("o"),
-                                    response.getString("h"),
-                                    response.getString("l"),
-                                    response.getString("c"),
-                                    response.getString("pc"),
-                                    StockCalculator.calculateProfitLoss(response.getString("o"), response.getString("c"))
+                        .addPathParameter("symbol", rawStock.symbol)
+                        .addPathParameter("token", Constants.API_TOKEN)
+                        .setPriority(Priority.HIGH)
+                        .build()
+                        .getAsJSONObject(object : JSONObjectRequestListener {
+                            override fun onResponse(response: JSONObject?) {
+                                StockApplicationClass.addStockItem(
+                                        Stock(
+                                                false,
+                                                rawStock.symbol,
+                                                response!!.getString("o"),
+                                                response.getString("h"),
+                                                response.getString("l"),
+                                                response.getString("c"),
+                                                response.getString("pc"),
+                                                StockCalculator.calculateProfitLoss(response.getString("o"), response.getString("c"))
+                                        )
                                 )
-                            )
-                        }
 
-                        override fun onError(error: ANError) {
-                            Log.d(
-                                "networkingServiceLog",
-                                "RequestJobService: Error while Android Networking, " + error.message
-                            )
-                        }
-                    })
+                                Log.d("networkingServiceLog", "Symbol: " + rawStock.symbol + "\nO: " + response!!.getString("o") + "\nH: " + response.getString("h") +
+                                        "\nL: " + response.getString("l") + "\nC: " + response.getString("c") + "\nPC: " + response.getString("pc")
+                                )
+                            }
+
+                            override fun onError(error: ANError) {
+                                Log.d(
+                                        "networkingServiceLog",
+                                        "RequestJobService: Error while Android Networking, " + error.message
+                                )
+                            }
+                        })
             }
         }
-
+/*
         NetworkingHelperClass(Constants.Context).cancelJob()
-        NetworkingHelperClass(Constants.Context).scheduleJob(true)
-        Log.d(
-            "networkingServiceLog",
-            "RequestJobService: Job Finished And Rescheduled"
-        )
+        NetworkingHelperClass(Constants.Context).scheduleJob(true)*/
     }
 }

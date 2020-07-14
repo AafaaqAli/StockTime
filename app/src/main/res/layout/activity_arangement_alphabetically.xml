@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".ArrangementAlphabeticallyActivity">
+
+
+    <TextView
+        android:id="@+id/textViewStockMarketName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/comfortaa"
+        android:text="NASDAK"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="15dp" />
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/textViewStockMarketName"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="3dp"
+        android:columnCount="7"
+        android:rowCount="6">
+
+        <com.example.stocktime.AlphabetView
+            android:id="@+id/alphabetViewA"
+            android:clickable="true"/>
+
+        <com.example.stocktime.AlphabetView android:id="@+id/alphabetViewB" />
+
+        <com.example.stocktime.AlphabetView android:id="@+id/alphabetViewC" />
+
+        <com.example.stocktime.AlphabetView android:id="@+id/alphabetViewD" />
+
+        <com.example.stocktime.AlphabetView android:id="@+id/alphabetViewE" />
+
+
+        <com.example.stocktime.AlphabetView android:id="@+id/alphabetViewF" />
+
+        <com.example.stocktime.AlphabetView android:id="@+id/alphabetViewG" />
+
+
+        <com.example.stocktime.AlphabetView android:id="@+id/alphabetViewH" />
+
+
+        <com.example.stocktime.AlphabetView android:id="@+id/alphabetViewI" />
+
+
+        <com.example.stocktime.AlphabetView android:id="@+id/alphabetViewJ" />
+
+
+        <com.example.stocktime.AlphabetView android:id="@+id/alphabetViewK" />
+
+
+        <com.example.stocktime.AlphabetView android:id="@+id/alphabetViewL" />
+
+
+        <com.example.stocktime.AlphabetView android:id="@+id/alphabetViewM" />
+
+
+        <com.example.stocktime.AlphabetView android:id="@+id/alphabetViewN" />
+
+
+        <com.example.stocktime.AlphabetView android:id="@+id/alphabetViewO" />
+
+
+        <com.example.stocktime.AlphabetView android:id="@+id/alphabetViewP" />
+
+
+        <com.example.stocktime.AlphabetView android:id="@+id/alphabetViewQ" />
+
+
+        <com.example.stocktime.AlphabetView android:id="@+id/alphabetViewR" />
+
+
+        <com.example.stocktime.AlphabetView android:id="@+id/alphabetViewS" />
+
+
+        <com.example.stocktime.AlphabetView android:id="@+id/alphabetViewT" />
+
+
+        <com.example.stocktime.AlphabetView android:id="@+id/alphabetViewU" />
+
+
+        <com.example.stocktime.AlphabetView android:id="@+id/alphabetViewV" />
+
+
+        <com.example.stocktime.AlphabetView android:id="@+id/alphabetViewW" />
+
+
+        <com.example.stocktime.AlphabetView android:id="@+id/alphabetViewX" />
+
+        <com.example.stocktime.AlphabetView android:id="@+id/alphabetViewY" />
+
+
+        <com.example.stocktime.AlphabetView android:id="@+id/alphabetViewZ" />
+
+    </GridLayout>
+
+</RelativeLayout>

@@ -10,11 +10,14 @@ import com.example.stocks.Constants
 import com.example.stocks.StockApplicationClass
 import com.jacksonandroidnetworking.JacksonParserFactory
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 
 class MainActivity : WearableActivity() {
     lateinit var networkingHelperClass: NetworkingHelperClass
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -26,36 +29,13 @@ class MainActivity : WearableActivity() {
         }
         networkingHelperClass = NetworkingHelperClass(this)
         Constants.Context = applicationContext
-
-        if (HelperClass.isInternetAvailable(this)) {
-            if (!Constants.isFirstRun) {
-                if (StockApplicationClass.getSelectedStocksList().isNotEmpty()) {
-                    textViewItemsNotFound.setText(R.string.no_item_added)
-                    textViewItemsNotFound.visibility = View.INVISIBLE
-                    networkingHelperClass.startJob()
-
-                    initAdapter()
-                } else {
-                    textViewItemsNotFound.setText(R.string.no_item_added)
-                    textViewItemsNotFound.visibility = View.VISIBLE
-                    NetworkOperations().startNetworkRequest()
-                }
-            } else {
-                if (StockApplicationClass.getSelectedStocksList().isEmpty()) {
-                    Constants.isFirstRun = true
-                    NetworkOperations().startNetworkRequest()
-                    textViewItemsNotFound.setText(R.string.no_item)
-                    textViewItemsNotFound.visibility = View.VISIBLE
-                }
-            }
-        }
         openSetting()
     }
 
 
     private fun openSetting() {
         imageViewSetting.setOnClickListener {
-            startActivity(Intent(this, StocksActivity::class.java))
+            startActivity(Intent(this, StockMarketArangementActivity::class.java))
         }
     }
 
@@ -65,15 +45,36 @@ class MainActivity : WearableActivity() {
         recyclerViewSelectedStock.layoutManager = LinearLayoutManager(this)
         recyclerViewSelectedStock.adapter = SelectedStockAdapter(
             this,
-            StockApplicationClass.getSelectedStocksList())
+            StockApplicationClass.getStocksList())
     }
 
     override fun onResume() {
         super.onResume()
-        if (StockApplicationClass.getSelectedStocksList().isNotEmpty()) {
+        if (StockApplicationClass.getSelectedRowStocksList().isNotEmpty()) {
             textViewItemsNotFound.visibility = View.INVISIBLE
-            initAdapter()
 
+            if (HelperClass.isInternetAvailable(this)) {
+                if (!Constants.isFirstRun) {
+                    if (StockApplicationClass.getSelectedRowStocksList().isNotEmpty()) {
+                        textViewItemsNotFound.setText(R.string.no_item_added)
+                        textViewItemsNotFound.visibility = View.INVISIBLE
+                        updateList(true)
+                        /*networkingHelperClass.startJob()*/
+                        initAdapter()
+                    } else {
+                        textViewItemsNotFound.setText(R.string.no_item_added)
+                        textViewItemsNotFound.visibility = View.VISIBLE
+                        NetworkOperations().startNetworkRequest()
+                    }
+                } else {
+                    if (StockApplicationClass.getSelectedRowStocksList().isEmpty()) {
+                        Constants.isFirstRun = true
+                        updateList(true)
+                        textViewItemsNotFound.setText(R.string.no_item)
+                        textViewItemsNotFound.visibility = View.VISIBLE
+                    }
+                }
+            }
         } else {
             /*Show No Data found*/
             if (!Constants.isFirstRun) {
@@ -91,6 +92,22 @@ class MainActivity : WearableActivity() {
         super.onDestroy()
         if (HelperClass.isJobServiceOn(this)) {
             networkingHelperClass.cancelJob()
+            updateList(false)
+
         }
+    }
+
+
+    private fun updateList(shouldActive: Boolean){
+        if(shouldActive){
+            GlobalScope.launch(Dispatchers.IO){
+                NetworkOperations().startNetworkRequest()
+                delay(Constants.RESTART_INTERVAL)
+                updateList(true)
+            }
+        }else{
+            return
+        }
+
     }
 }

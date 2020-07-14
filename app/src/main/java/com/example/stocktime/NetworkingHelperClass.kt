@@ -15,7 +15,6 @@ import com.example.stocks.Constants
 class NetworkingHelperClass(context: Context) {
      private var mContext: Context = context
 
-
     fun startJob(){
         if(HelperClass.isJobServiceOn(mContext)){
             Log.d("networkingServiceLog", "NetworkingHelperClass: Job service already running")
@@ -34,7 +33,6 @@ class NetworkingHelperClass(context: Context) {
             Log.d("networkingServiceLog", "NetworkingHelperClass: Job service already stoped")
         }
     }
-
     @SuppressLint("ObsoleteSdkInt")
     fun scheduleJob(setEnable: Boolean){
         val jobResult: Int
@@ -46,7 +44,7 @@ class NetworkingHelperClass(context: Context) {
         if(setEnable){
             if (Build.VERSION.SDK_INT < Build.VERSION_CODES.N){
                 jobInfo = JobInfo.Builder(Constants.JOB_SERVICE_ID, componentName)
-                    .setMinimumLatency(Constants.JOB_REQUEST_RESTART_INTERVALS)
+                    .setMinimumLatency(Constants.JOB_REQUEST_RESTART_INTERVAL)
                     .setPersisted(true)
                     .build()
             } else {

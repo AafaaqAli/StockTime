@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StockMarketArangementActivity">
+
+    <TextView
+        android:id="@+id/textViewStockMarketNameMarketArrangement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp"
+        android:fontFamily="@font/comfortaa"
+        android:text="Stock Markets"
+        android:textAlignment="center"
+        android:textColor="@color/white" />
+
+    <LinearLayout
+        android:layout_below="@+id/textViewStockMarketNameMarketArrangement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewGeneral"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:elevation="10dp"
+            android:focusable="true"
+            app:cardCornerRadius="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="1dp"
+                android:fontFamily="@font/comfortaa"
+                android:padding="1dp"
+                android:text="General"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="10dp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+
+            android:id="@+id/cardViewTSX"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:elevation="10dp"
+            android:focusable="true"
+            app:cardCornerRadius="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="1dp"
+                android:fontFamily="@font/comfortaa"
+                android:padding="1dp"
+                android:text="TSX"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="10dp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+
+            android:id="@+id/cardViewNYSE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:elevation="10dp"
+            android:focusable="true"
+            app:cardCornerRadius="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="1dp"
+                android:fontFamily="@font/comfortaa"
+                android:padding="1dp"
+                android:text="NYSE"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="10dp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+
+            android:id="@+id/cardViewNASDAK"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:elevation="10dp"
+            android:focusable="true"
+            app:cardCornerRadius="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="1dp"
+                android:fontFamily="@font/comfortaa"
+                android:padding="1dp"
+                android:text="NASDAK"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="9dp" />
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</RelativeLayout>

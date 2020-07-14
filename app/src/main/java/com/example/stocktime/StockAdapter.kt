@@ -12,8 +12,8 @@ import kotlinx.android.synthetic.main.selected_stock_item.view.*
 import kotlinx.android.synthetic.main.stock_item.view.*
 
 class StockAdapter(
-    val context: Context,
-    val stockList: MutableList<Stock>
+        val context: Context,
+        val stockList: ArrayList<RawStock>
 ) : RecyclerView.Adapter<ViewHolder>() {
 
 
@@ -34,9 +34,15 @@ class StockAdapter(
             View.VISIBLE else holder.imageViewCheck.visibility = View.INVISIBLE
 
         holder.itemView.setOnClickListener {
-            if (stockList[position].isSelected) stockList[position].isSelected = false else stockList[position].isSelected = true
-            if(stockList[position].isSelected) StockApplicationClass.addSelectedStockItem(stockList[position]) else StockApplicationClass.removeSelectedStockItem(stockList[position])
+            if (stockList[position].isSelected) {
+                stockList[position].isSelected = false
+                StockApplicationClass.removeSelectedRawStockItem(stockList[position])
 
+            } else {
+                stockList[position].isSelected = true
+                StockApplicationClass.addSelectedRawStockItem(stockList[position])
+
+            }
 
             if (stockList[position].isSelected) holder.relativeLayoutStockItem.setBackgroundColor(
                 context.getColor(R.color.green)

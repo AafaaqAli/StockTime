@@ -8,7 +8,7 @@ class StockCalculator {
         }
 
         fun calculatePercentage(o: String, c: String): String{
-            return (round(o.toDouble() / c.toDouble() * 100.0) / 100.0).toString()
+            return ("%.3f".format (((c.toDouble() - o.toDouble()) / o.toDouble()) * 100.0))
         }
     }
 }

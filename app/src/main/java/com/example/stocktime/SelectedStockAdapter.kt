@@ -38,13 +38,9 @@ class SelectedStockAdapter(
             holder.textViewStockNameSelected.text =
                listOfSelectedStocks[position].symbol
             holder.textViewStockNameSelected.setTextColor(context.getColor(R.color.red_a200))
-            holder.textViewPoints.text =  "- " + StockCalculator.calculatePercentage(listOfSelectedStocks[position].openPrice, listOfSelectedStocks[position].currentPrice) + "%"
+            holder.textViewPoints.text =  StockCalculator.calculatePercentage(listOfSelectedStocks[position].openPrice, listOfSelectedStocks[position].currentPrice) + "%"
             holder.textViewPoints.setTextColor(Color.parseColor("#F44336"))
         }
-    }
-
-    fun calculateRatio(o: String, c: String){
-
     }
 
 }

@@ -13,7 +13,9 @@ class RequestJobService : JobService() {
 
     override fun onStartJob(prams: JobParameters?): Boolean {
         Log.d("networkingServiceLog", "RequestJobService: Job Started onStartJob()")
+/*
         NetworkOperations().startNetworkRequest()
+*/
         return true
     }
 }
