@@ -10,8 +10,8 @@ import com.example.stocks.Stock
 import kotlinx.android.synthetic.main.selected_stock_item.view.*
 
 class SelectedStockAdapter(
-    val context: Context,
-    val listOfSelectedStocks: MutableList<Stock>
+        val context: Context,
+        val listOfSelectedStocks: List<Stock>
 ) : RecyclerView.Adapter<SelectedStockViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SelectedStockViewHolder {

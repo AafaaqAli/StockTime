@@ -6,8 +6,10 @@ class Constants {
     companion object {
         lateinit var Context: Context
         const val API_TOKEN = "bs3m6jfrh5r9llvji8sg"
+        const val DB_NAME = "stock_db"
+        const val TABLE_NAME = "stock_db"
         const val JOB_SERVICE_ID = 110
-        const val JOB_REQUEST_RESTART_INTERVAL: Long = 1000 * 60 * 15 //15 minutes
+        const val JOB_REQUEST_RESTART_INTERVAL: Long = 1000 * 60 * 15 //15 minutes for jobServie(not using it(because of 15 min minimum job reshadule time))
         const val RESTART_INTERVAL: Long = 1000 * 60//1 minute
 
         var isFirstRun: Boolean = false

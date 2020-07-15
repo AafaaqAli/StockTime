@@ -17,16 +17,25 @@ import kotlinx.coroutines.launch
 
 
 class MainActivity : WearableActivity() {
+    lateinit var stockDB: StockDB
     lateinit var networkingHelperClass: NetworkingHelperClass
+    var selectedRawStocks: List<RawStock> = arrayListOf()
+
+    var isInit: Boolean = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        if(HelperClass.isInternetAvailable(this)){
+
+        stockDB = StockDB.getDatabase(applicationContext)
+
+        if (HelperClass.isInternetAvailable(this)) {
             AndroidNetworking.initialize(applicationContext);
             AndroidNetworking.setParserFactory(JacksonParserFactory())
-
         }
+
+
         networkingHelperClass = NetworkingHelperClass(this)
         Constants.Context = applicationContext
         openSetting()
@@ -44,8 +53,9 @@ class MainActivity : WearableActivity() {
         /*set adapter here*/
         recyclerViewSelectedStock.layoutManager = LinearLayoutManager(this)
         recyclerViewSelectedStock.adapter = SelectedStockAdapter(
-            this,
-            StockApplicationClass.getStocksList())
+                this,
+                StockApplicationClass.getSelectedStocksList())
+        recyclerViewSelectedStock.adapter!!.notifyDataSetChanged()
     }
 
     override fun onResume() {
@@ -56,15 +66,25 @@ class MainActivity : WearableActivity() {
             if (HelperClass.isInternetAvailable(this)) {
                 if (!Constants.isFirstRun) {
                     if (StockApplicationClass.getSelectedRowStocksList().isNotEmpty()) {
+                        GlobalScope.launch(Dispatchers.IO) {
+                            StockApplicationClass.getSelectedRowStocksList().forEach { rawStock ->
+                                stockDB.stockDAO().insertAll(rawStock)
+                            }
+                        }
+                    }
+                    if (StockApplicationClass.getSelectedStocksList().isNotEmpty()) {
                         textViewItemsNotFound.setText(R.string.no_item_added)
-                        textViewItemsNotFound.visibility = View.INVISIBLE
+                        textViewItemsNotFound.visibility = View.VISIBLE
                         updateList(true)
                         /*networkingHelperClass.startJob()*/
                         initAdapter()
                     } else {
                         textViewItemsNotFound.setText(R.string.no_item_added)
                         textViewItemsNotFound.visibility = View.VISIBLE
-                        NetworkOperations().startNetworkRequest()
+                        GlobalScope.launch(Dispatchers.IO) {
+                            selectedRawStocks = stockDB.stockDAO().getAll()
+                            NetworkOperations(selectedRawStocks).startNetworkRequest()
+                        }
                     }
                 } else {
                     if (StockApplicationClass.getSelectedRowStocksList().isEmpty()) {
@@ -98,14 +118,15 @@ class MainActivity : WearableActivity() {
     }
 
 
-    private fun updateList(shouldActive: Boolean){
-        if(shouldActive){
-            GlobalScope.launch(Dispatchers.IO){
-                NetworkOperations().startNetworkRequest()
+    private fun updateList(shouldActive: Boolean) {
+        if (shouldActive) {
+            GlobalScope.launch(Dispatchers.IO) {
+                NetworkOperations(selectedRawStocks
+                ).startNetworkRequest()
                 delay(Constants.RESTART_INTERVAL)
                 updateList(true)
             }
-        }else{
+        } else {
             return
         }
 

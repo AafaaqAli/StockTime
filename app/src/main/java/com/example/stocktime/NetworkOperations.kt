@@ -13,7 +13,8 @@ import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import org.json.JSONObject
 
-class NetworkOperations {
+class NetworkOperations (rawStocks: List<RawStock>){
+    private val mRawStocks = rawStocks
     fun startNetworkRequest() {
         Log.d(
                 "networkingServiceLog",
@@ -22,7 +23,7 @@ class NetworkOperations {
         GlobalScope.launch(Dispatchers.IO) {
             StockApplicationClass.emptyStockItem()
             Log.d("networkingServiceLog", "Size of SelectedRawList: " + StockApplicationClass.getSelectedRowStocksList().size)
-            StockApplicationClass.getSelectedRowStocksList().forEach { rawStock ->
+            mRawStocks.forEach { rawStock ->
                 AndroidNetworking.get(" https://finnhub.io/api/v1/quote?symbol={symbol}&token={token}")
                         .addPathParameter("symbol", rawStock.symbol)
                         .addPathParameter("token", Constants.API_TOKEN)

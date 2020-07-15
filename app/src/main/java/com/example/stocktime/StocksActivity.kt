@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.support.wearable.activity.WearableActivity
 import android.util.Log
 import android.view.View
+import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.stocks.Constants
 import com.example.stocks.Stock
@@ -23,15 +24,17 @@ class StocksActivity : WearableActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_stocks)
 
+
         getIntentData()
         setDataPreferences(alphabet)
     }
 
 
-    private fun getIntentData(){
+    private fun getIntentData() {
         alphabet = intent.getStringExtra("stockListAlphabet").toString()
-        stockMarketID =  intent.getIntExtra("stockListID", -1)
+        stockMarketID = intent.getIntExtra("stockListID", -1)
     }
+
     private fun initAdapter(stockList: ArrayList<RawStock>) {
         if (stockList.isNotEmpty()) {
             textViewSortedStocksItemNotAdded.visibility = View.INVISIBLE
@@ -47,10 +50,10 @@ class StocksActivity : WearableActivity() {
         }
     }
 
-    private fun setDataPreferences(tag: String){
+    private fun setDataPreferences(tag: String) {
         var stockMarketList: ArrayList<String> = arrayListOf()
         var isListValid = true
-        when(stockMarketID){
+        when (stockMarketID) {
             Constants.GENERAL -> {
                 isListValid = true
                 stockMarketList = Constants.GENERAL_SYMBOL_LIST
@@ -76,22 +79,24 @@ class StocksActivity : WearableActivity() {
             }
         }
 
-        if(isListValid){
-            if(tag != "non_null"){
-                GlobalScope.launch(Dispatchers.Default){
-                    for(symbol in stockMarketList) {
-                        if (symbol.startsWith(tag)){
-                            tempStocksList.add(RawStock(false, symbol))
-                            Log.d("LogAlpabet","TAG: " +  tag)
-                            Log.d("LogAlpabet","Symbol: " +  symbol)
-                            Log.d("LogAlpabet","=======================================================")
+        if (isListValid) {
+            if (tag != "non_null") {
+                GlobalScope.launch(Dispatchers.Default) {
+                    for (symbol in stockMarketList) {
+                        if (symbol.startsWith(tag)) {
+                            if (tempStocksList.size == 0) {
+                                tempStocksList.add(RawStock(0, false, symbol))
+                            } else {
+                                tempStocksList.add(RawStock(tempStocksList.size + 1, false, symbol))
+                            }
+
                         }
                     }
 
                     initAdapter(tempStocksList)
 
                 }
-            }else{
+            } else {
                 Log.d("LogAlpabet", "null")
 
             }
