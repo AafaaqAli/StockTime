@@ -5,9 +5,9 @@ import com.example.stocktime.RawStock
 
 class StockApplicationClass : Application() {
     companion object {
-        private var listOfStocks: MutableList<Stock> = arrayListOf()
-        private var listOfSelectedStocks: MutableList<Stock> = arrayListOf()
-        private var listOfRawSelectedStocks: MutableList<RawStock> = arrayListOf()
+        private var listOfStocks: ArrayList<Stock> = arrayListOf()
+        private var listOfSelectedStocks: ArrayList<Stock> = arrayListOf()
+        private var listOfRawSelectedStocks: ArrayList<RawStock> = arrayListOf()
 
         fun getStocksList(): MutableList<Stock> {
             return this.listOfStocks
@@ -30,7 +30,7 @@ class StockApplicationClass : Application() {
         }
 
 
-        fun getSelectedStocksList(): MutableList<Stock> {
+        fun getSelectedStocksList(): ArrayList<Stock> {
             return this.listOfSelectedStocks
         }
 
@@ -46,7 +46,7 @@ class StockApplicationClass : Application() {
         }
 
 
-        fun getSelectedRowStocksList(): MutableList<RawStock> {
+        fun getSelectedRowStocksList(): ArrayList<RawStock> {
             return this.listOfRawSelectedStocks
         }
 

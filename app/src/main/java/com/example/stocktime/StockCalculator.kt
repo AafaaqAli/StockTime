@@ -1,5 +1,4 @@
 package com.example.stocktime
-import java.lang.Math.round
 
 class StockCalculator {
     companion object {
@@ -8,7 +7,11 @@ class StockCalculator {
         }
 
         fun calculatePercentage(o: String, c: String): String{
-            return ("%.3f".format (((c.toDouble() - o.toDouble()) / o.toDouble()) * 100.0))
+            if(o != "NULL" && c != "NULL"){
+                return ("%.3f".format (((c.toDouble() - o.toDouble()) / o.toDouble()) * 100.0))
+            }else{
+                return "NULL"
+            }
         }
     }
 }

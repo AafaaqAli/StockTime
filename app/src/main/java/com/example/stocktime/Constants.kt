@@ -11,62 +11,10 @@ class Constants {
         const val RESTART_INTERVAL: Long = 1000 * 60//1 minute
 
         var isFirstRun: Boolean = false
-        const val GENERAL = 0
+        const val FAVOURITE = 0
         const val TSX = 1
         const val NYSE = 2
         const val NASDAK = 3
-        var GENERAL_SYMBOL_LIST: ArrayList<String> = arrayListOf(
-            "AAPL",
-            "MSFT",
-            "AMZN",
-            "GOOGL",
-            "FB",
-            "BABA",
-            "BRK.A",
-            "V",
-            "JNJ",
-            "WMT",
-            "TSM",
-            "MA",
-            "PG",
-            "JPM",
-            "UNH",
-            "HD",
-            "TSLA",
-            "NVDA",
-            "INTC",
-            "VZ",
-            "NFLX",
-            "ADBE",
-            "T",
-            "PYPL",
-            "DIS",
-            "NVS",
-            "BAC",
-            "MRK",
-            "KO",
-            "CSCO",
-            "PFE",
-            "PEP",
-            "XOM",
-            "CMCSA",
-            "CRM",
-            "SAP",
-            "TM",
-            "ABBV",
-            "ORCL",
-            "ASML",
-            "ABT",
-            "CVX",
-            "LLY",
-            "NKE",
-            "TMO",
-            "CHL",
-            "TMUS",
-            "AMGN",
-            "AZN",
-            "COST"
-        )
         var TSX_SYMBOL_LIST: ArrayList<String> = arrayListOf(
                 "AAB",
                 "AAV",

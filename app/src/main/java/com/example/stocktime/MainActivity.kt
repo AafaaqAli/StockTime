@@ -3,6 +3,7 @@ package com.example.stocktime
 import android.content.Intent
 import android.os.Bundle
 import android.support.wearable.activity.WearableActivity
+import android.util.Log
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.androidnetworking.AndroidNetworking
@@ -51,22 +52,33 @@ class MainActivity : WearableActivity() {
     override fun onResume() {
         super.onResume()
         if (StockApplicationClass.getSelectedRowStocksList().isNotEmpty()) {
+            Log.d("bugLog", "1")
+
             textViewItemsNotFound.visibility = View.INVISIBLE
 
             if (HelperClass.isInternetAvailable(this)) {
+                Log.d("bugLog", "2")
                 if (!Constants.isFirstRun) {
+                    Log.d("bugLog", "2")
+
                     if (StockApplicationClass.getSelectedRowStocksList().isNotEmpty()) {
+                        Log.d("bugLog", "3")
+
                         textViewItemsNotFound.setText(R.string.no_item_added)
                         textViewItemsNotFound.visibility = View.INVISIBLE
                         updateList(true)
                         /*networkingHelperClass.startJob()*/
                         initAdapter()
                     } else {
+                        Log.d("bugLog", "4")
+
                         textViewItemsNotFound.setText(R.string.no_item_added)
                         textViewItemsNotFound.visibility = View.VISIBLE
                         NetworkOperations().startNetworkRequest()
                     }
                 } else {
+                    Log.d("bugLog", "5")
+
                     if (StockApplicationClass.getSelectedRowStocksList().isEmpty()) {
                         Constants.isFirstRun = true
                         updateList(true)
@@ -76,11 +88,17 @@ class MainActivity : WearableActivity() {
                 }
             }
         } else {
+            Log.d("bugLog", "6")
+
             /*Show No Data found*/
             if (!Constants.isFirstRun) {
+                Log.d("bugLog", "7")
+
                 textViewItemsNotFound.setText(R.string.no_item_added)
                 textViewItemsNotFound.visibility = View.INVISIBLE
             } else {
+                Log.d("bugLog", "8")
+
                 Constants.isFirstRun = true
                 textViewItemsNotFound.setText(R.string.no_item)
                 textViewItemsNotFound.visibility = View.VISIBLE

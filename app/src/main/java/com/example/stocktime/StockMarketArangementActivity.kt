@@ -12,7 +12,7 @@ class StockMarketArangementActivity : WearableActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_stock_market_arangement)
 
-        cardViewGeneral.setOnClickListener(this)
+        cardViewFavourite.setOnClickListener(this)
         cardViewTSX.setOnClickListener(this)
         cardViewNYSE.setOnClickListener(this)
         cardViewNASDAK.setOnClickListener(this)
@@ -22,8 +22,8 @@ class StockMarketArangementActivity : WearableActivity(), View.OnClickListener {
 
     override fun onClick(view: View?) {
         when (view!!.id) {
-            R.id.cardViewGeneral -> {
-                getAppropriateSymbolList(Constants.GENERAL, "GENERAL")
+            R.id.cardViewFavourite -> {
+                getAppropriateSymbolList(Constants.FAVOURITE, "FAVOURITE")
             }
 
             R.id.cardViewTSX -> {
@@ -42,11 +42,17 @@ class StockMarketArangementActivity : WearableActivity(), View.OnClickListener {
         }
     }
 
-
     private fun getAppropriateSymbolList(stockExchangeID: Int, stockMarketName: String) {
-       val intent = Intent(this, ArrangementAlphabeticallyActivity::class.java)
-        intent.putExtra("stock_exchange_id", stockExchangeID)
-        intent.putExtra("stock_exchange_name", stockMarketName)
-        startActivity(intent)
+        if(stockExchangeID == Constants.FAVOURITE){
+            val intent = Intent(this, StocksActivity::class.java)
+            intent.putExtra("stockListID", stockExchangeID)
+            intent.putExtra("stockListAlphabet", stockMarketName)
+            startActivity(intent)
+        }else{
+            val intent = Intent(this, ArrangementAlphabeticallyActivity::class.java)
+            intent.putExtra("stock_exchange_id", stockExchangeID)
+            intent.putExtra("stock_exchange_name", stockMarketName)
+            startActivity(intent)
+        }
     }
 }

@@ -12,15 +12,17 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import org.json.JSONObject
+import java.lang.reflect.InvocationTargetException
 
 class NetworkOperations {
     fun startNetworkRequest() {
-        Log.d(
-                "networkingServiceLog",
-                "NetworkOperation:  Network Request Started"
-        )
+        StockApplicationClass.getStocksList().clear()
+
+        GlobalScope.launch {
+            StockApplicationClass.getStocksList().clear()
+        }
+
         GlobalScope.launch(Dispatchers.IO) {
-            StockApplicationClass.emptyStockItem()
             Log.d("networkingServiceLog", "Size of SelectedRawList: " + StockApplicationClass.getSelectedRowStocksList().size)
             StockApplicationClass.getSelectedRowStocksList().forEach { rawStock ->
                 AndroidNetworking.get(" https://finnhub.io/api/v1/quote?symbol={symbol}&token={token}")
@@ -30,22 +32,26 @@ class NetworkOperations {
                         .build()
                         .getAsJSONObject(object : JSONObjectRequestListener {
                             override fun onResponse(response: JSONObject?) {
-                                StockApplicationClass.addStockItem(
-                                        Stock(
-                                                false,
-                                                rawStock.symbol,
-                                                response!!.getString("o"),
-                                                response.getString("h"),
-                                                response.getString("l"),
-                                                response.getString("c"),
-                                                response.getString("pc"),
-                                                StockCalculator.calculateProfitLoss(response.getString("o"), response.getString("c"))
-                                        )
-                                )
+                                if (response?.has("error") != true) {
+                                    StockApplicationClass.addStockItem(
+                                            Stock(
+                                                    false,
+                                                    rawStock.symbol,
+                                                    response!!.getString("o"),
+                                                    response.getString("h"),
+                                                    response.getString("l"),
+                                                    response.getString("c"),
+                                                    response.getString("pc"),
+                                                    StockCalculator.calculateProfitLoss(response!!.getString("o"), response.getString("c"))
+                                            )
+                                    )
 
-                                Log.d("networkingServiceLog", "Symbol: " + rawStock.symbol + "\nO: " + response!!.getString("o") + "\nH: " + response.getString("h") +
-                                        "\nL: " + response.getString("l") + "\nC: " + response.getString("c") + "\nPC: " + response.getString("pc")
-                                )
+                                    Log.d("networkingServiceLog", "Symbol: " + rawStock.symbol + "\nO: " + response!!.getString("o") + "\nH: " + response.getString("h") +
+                                            "\nL: " + response.getString("l") + "\nC: " + response.getString("c") + "\nPC: " + response.getString("pc")
+                                    )
+
+                                }
+
                             }
 
                             override fun onError(error: ANError) {

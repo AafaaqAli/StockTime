@@ -6,19 +6,17 @@ import android.util.Log
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.stocks.Constants
-import com.example.stocks.Stock
+import com.example.stocks.StockApplicationClass
 import kotlinx.android.synthetic.main.activity_stocks.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
-import java.util.*
 import kotlin.collections.ArrayList
 
 class StocksActivity : WearableActivity() {
     var stockMarketID = -1
     var tempStocksList: ArrayList<RawStock> = arrayListOf()
-    var alphabet: String = "non_null"
-
+    var alphabet: String = "null"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_stocks)
@@ -28,10 +26,12 @@ class StocksActivity : WearableActivity() {
     }
 
 
-    private fun getIntentData(){
+    private fun getIntentData() {
+        stockMarketID = intent.getIntExtra("stockListID", -1)
         alphabet = intent.getStringExtra("stockListAlphabet").toString()
-        stockMarketID =  intent.getIntExtra("stockListID", -1)
+
     }
+
     private fun initAdapter(stockList: ArrayList<RawStock>) {
         if (stockList.isNotEmpty()) {
             textViewSortedStocksItemNotAdded.visibility = View.INVISIBLE
@@ -47,13 +47,17 @@ class StocksActivity : WearableActivity() {
         }
     }
 
-    private fun setDataPreferences(tag: String){
+    private fun setDataPreferences(tag: String) {
+        var counter = 0
         var stockMarketList: ArrayList<String> = arrayListOf()
         var isListValid = true
-        when(stockMarketID){
-            Constants.GENERAL -> {
+        when (stockMarketID) {
+            Constants.FAVOURITE -> {
                 isListValid = true
-                stockMarketList = Constants.GENERAL_SYMBOL_LIST
+                StockApplicationClass.getSelectedRowStocksList().forEach { rawStock ->
+                    stockMarketList.add(rawStock.symbol)
+                    Log.d("bugLog", " In Stock Activity Added ${counter++}")
+                }
             }
 
             Constants.NASDAK -> {
@@ -76,22 +80,31 @@ class StocksActivity : WearableActivity() {
             }
         }
 
-        if(isListValid){
-            if(tag != "non_null"){
-                GlobalScope.launch(Dispatchers.Default){
-                    for(symbol in stockMarketList) {
-                        if (symbol.startsWith(tag)){
-                            tempStocksList.add(RawStock(false, symbol))
-                            Log.d("LogAlpabet","TAG: " +  tag)
-                            Log.d("LogAlpabet","Symbol: " +  symbol)
-                            Log.d("LogAlpabet","=======================================================")
+        if (isListValid) {
+            if (tag != "null") {
+                if (tag == "FAVOURITE") {
+                    GlobalScope.launch(Dispatchers.Default) {
+                        for (symbol in stockMarketList) {
+                            tempStocksList.add(RawStock(true, symbol))
+
                         }
+
+                        initAdapter(tempStocksList)
+
                     }
+                } else {
+                    GlobalScope.launch(Dispatchers.Default) {
+                        for (symbol in stockMarketList) {
+                            if (symbol.startsWith(tag)) {
+                                tempStocksList.add(RawStock(false, symbol))
+                            }
+                        }
 
-                    initAdapter(tempStocksList)
+                        initAdapter(tempStocksList)
 
+                    }
                 }
-            }else{
+            } else {
                 Log.d("LogAlpabet", "null")
 
             }

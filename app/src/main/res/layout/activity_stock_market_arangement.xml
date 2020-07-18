@@ -25,7 +25,7 @@
         android:orientation="vertical">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardViewGeneral"
+            android:id="@+id/cardViewFavourite"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -41,7 +41,7 @@
                 android:layout_margin="1dp"
                 android:fontFamily="@font/comfortaa"
                 android:padding="1dp"
-                android:text="General"
+                android:text="Favourite"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="10dp" />

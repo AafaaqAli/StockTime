@@ -2,6 +2,7 @@ package com.example.stocktime
 
 import android.content.Context
 import android.graphics.Color
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -35,12 +36,14 @@ class StockAdapter(
 
         holder.itemView.setOnClickListener {
             if (stockList[position].isSelected) {
-                stockList[position].isSelected = false
                 StockApplicationClass.removeSelectedRawStockItem(stockList[position])
+                Log.d("bugLog", "item Removed at: ${position}, And item is: ${stockList[position]}" )
 
             } else {
                 stockList[position].isSelected = true
                 StockApplicationClass.addSelectedRawStockItem(stockList[position])
+
+                Log.d("bugLog", "item Added at: ${position}, And item is: ${stockList[position]}" )
 
             }
 
