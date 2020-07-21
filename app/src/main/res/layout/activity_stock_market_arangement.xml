@@ -113,7 +113,7 @@
                 android:layout_margin="1dp"
                 android:fontFamily="@font/comfortaa"
                 android:padding="1dp"
-                android:text="NASDAK"
+                android:text="NASDAQ"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="9dp" />

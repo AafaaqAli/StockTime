@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.stocktime">
+    package="com.stockwatch.stockWatchIt">
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -16,14 +16,14 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@android:style/Theme.DeviceDefault">
-        <activity android:name=".StockMarketArangementActivity"/>
-        <activity android:name=".ArrangementAlphabeticallyActivity" />
+        <activity android:name="com.stockwatch.stockWatchIt.StockMarketArangementActivity"/>
+        <activity android:name="com.stockwatch.stockWatchIt.ArrangementAlphabeticallyActivity" />
 
         <service
-            android:name=".RequestJobService"
+            android:name="com.stockwatch.stockWatchIt.RequestJobService"
             android:permission="android.permission.BIND_JOB_SERVICE" />
 
-        <activity android:name=".StocksActivity" />
+        <activity android:name="com.stockwatch.stockWatchIt.StocksActivity" />
 
         <uses-library
             android:name="com.google.android.wearable"
@@ -37,7 +37,7 @@
             android:value="true" />
 
         <activity
-            android:name=".MainActivity"
+            android:name="com.stockwatch.stockWatchIt.MainActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
