@@ -6,7 +6,6 @@ import android.util.Log
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.stockwatch.stocks.Constants
-import com.stockwatch.stocks.StockApplicationClass
 import kotlinx.android.synthetic.main.activity_stocks.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope

@@ -1,4 +1,4 @@
-package com.stockwatch.stocks
+package com.stockwatch.stockWatchIt
 
 data class Stock(var isSelected: Boolean,
                  var symbol: String,

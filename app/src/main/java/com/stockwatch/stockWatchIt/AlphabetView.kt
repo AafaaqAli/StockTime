@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 
 class AlphabetView(context: Context, attrs: AttributeSet?) : LinearLayout(context, attrs) {
-    var textViewAlphabet: TextView
+    private var textViewAlphabet: TextView
     var cardView: CardView
 
     init {

@@ -7,12 +7,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.stockwatch.stocks.StockApplicationClass
 import kotlinx.android.synthetic.main.stock_item.view.*
 
 class StockAdapter(
-        val context: Context,
-        val stockList: ArrayList<RawStock>
+        private val context: Context,
+        private val stockList: ArrayList<RawStock>
 ) : RecyclerView.Adapter<ViewHolder>() {
 
 
@@ -63,7 +62,7 @@ class StockAdapter(
 class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     val textViewUnselectedName = view.textViewStockName!!
     val imageViewCheck = view.imageViewCheck!!
-    val relativeLayoutStockItem = view.relativeLayoutStockItem
+    val relativeLayoutStockItem = view.relativeLayoutStockItem!!
 }
 
 

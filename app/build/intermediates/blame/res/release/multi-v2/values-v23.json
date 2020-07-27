@@ -1,0 +1,95 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/ali/AndroidProjects/StockTime/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-v23/values-v23.xml",
+            "map": [
+                {
+                    "source": "/home/ali/.gradle/caches/transforms-2/files-2.1/c97b0db2e77adb45592bee740aa5d495/cardview-1.0.0/res/values-v23/values-v23.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "4",
+                        "endColumns": "12",
+                        "endOffsets": "200"
+                    },
+                    "to": {
+                        "startLines": "58",
+                        "startColumns": "4",
+                        "startOffsets": "3870",
+                        "endLines": "60",
+                        "endColumns": "12",
+                        "endOffsets": "4015"
+                    }
+                },
+                {
+                    "source": "/home/ali/.gradle/caches/transforms-2/files-2.1/e46f3e16fd8948e8e4c48c913cb404d3/appcompat-1.1.0/res/values-v23/values-v23.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,20,34,35,36,37,41,42,43,44",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,190,325,400,487,1371,2267,2386,2513,2618,2842,2957,3064,3177",
+                        "endLines": "2,3,4,5,19,33,34,35,36,40,41,42,43,47",
+                        "endColumns": "134,134,74,86,12,12,118,126,104,12,114,106,112,12",
+                        "endOffsets": "185,320,395,482,1366,2262,2381,2508,2613,2837,2952,3059,3172,3402"
+                    },
+                    "to": {
+                        "startLines": "4,5,6,7,8,22,36,37,38,39,43,44,45,46",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "184,319,454,529,616,1500,2396,2515,2642,2747,2971,3086,3193,3306",
+                        "endLines": "4,5,6,7,21,35,36,37,38,42,43,44,45,49",
+                        "endColumns": "134,134,74,86,12,12,118,126,104,12,114,106,112,12",
+                        "endOffsets": "314,449,524,611,1495,2391,2510,2637,2742,2966,3081,3188,3301,3531"
+                    }
+                },
+                {
+                    "source": "/home/ali/.gradle/caches/transforms-2/files-2.1/269c052cb39885009ea732cd83bb3fe0/jetified-wearable-2.7.0/res/values-v23/values.xml",
+                    "from": {
+                        "startLines": "4,8,12,20,23",
+                        "startColumns": "0,0,0,0,0",
+                        "startOffsets": "211,373,537,938,1079",
+                        "endLines": "7,11,19,22,24",
+                        "endColumns": "8,8,8,8,8",
+                        "endOffsets": "372,536,937,1078,1178"
+                    },
+                    "to": {
+                        "startLines": "50,54,61,69,72",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "3536,3702,4020,4425,4570",
+                        "endLines": "53,57,68,71,73",
+                        "endColumns": "8,8,8,8,8",
+                        "endOffsets": "3697,3865,4420,4565,4669"
+                    }
+                },
+                {
+                    "source": "/home/ali/.gradle/caches/transforms-2/files-2.1/3cbf517ba7e3687c73b950c88e49ed8a/material-1.1.0/res/values-v23/values-v23.xml",
+                    "from": {
+                        "startLines": "2,6",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,320",
+                        "endLines": "5,9",
+                        "endColumns": "10,10",
+                        "endOffsets": "315,588"
+                    },
+                    "to": {
+                        "startLines": "74,78",
+                        "startColumns": "4,4",
+                        "startOffsets": "4674,4939",
+                        "endLines": "77,81",
+                        "endColumns": "10,10",
+                        "endOffsets": "4934,5207"
+                    }
+                },
+                {
+                    "source": "/home/ali/.gradle/caches/transforms-2/files-2.1/a75852264f39bf8524c1928f8e3de566/work-runtime-2.3.4/res/values-v23/values-v23.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,121",
+                        "endColumns": "65,62",
+                        "endOffsets": "116,179"
+                    }
+                }
+            ]
+        }
+    ]
+}

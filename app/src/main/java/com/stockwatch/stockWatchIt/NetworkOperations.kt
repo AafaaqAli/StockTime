@@ -6,8 +6,6 @@ import com.androidnetworking.common.Priority
 import com.androidnetworking.error.ANError
 import com.androidnetworking.interfaces.JSONObjectRequestListener
 import com.stockwatch.stocks.Constants
-import com.stockwatch.stocks.Stock
-import com.stockwatch.stocks.StockApplicationClass
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -41,7 +39,7 @@ class NetworkOperations {
                                                     response.getString("l"),
                                                     response.getString("c"),
                                                     response.getString("pc"),
-                                                    StockCalculator.calculateProfitLoss(response!!.getString("o"), response.getString("c"))
+                                                    StockCalculator.calculateProfitLoss(response.getString("o"), response.getString("c"))
                                             )
                                     )
 
@@ -62,8 +60,5 @@ class NetworkOperations {
                         })
             }
         }
-/*
-        NetworkingHelperClass(Constants.Context).cancelJob()
-        NetworkingHelperClass(Constants.Context).scheduleJob(true)*/
     }
 }

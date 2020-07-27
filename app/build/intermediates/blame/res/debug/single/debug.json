@@ -1,0 +1,78 @@
+[
+    {
+        "merged": "/home/ali/AndroidProjects/StockTime/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/home/ali/AndroidProjects/StockTime/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/ali/AndroidProjects/StockTime/app/build/intermediates/res/merged/debug/layout_activity_stocks.xml.flat",
+        "source": "/home/ali/AndroidProjects/StockTime/app/src/main/res/layout/activity_stocks.xml"
+    },
+    {
+        "merged": "/home/ali/AndroidProjects/StockTime/app/build/intermediates/res/merged/debug/layout_selected_stock_item.xml.flat",
+        "source": "/home/ali/AndroidProjects/StockTime/app/src/main/res/layout/selected_stock_item.xml"
+    },
+    {
+        "merged": "/home/ali/AndroidProjects/StockTime/app/build/intermediates/res/merged/debug/drawable_ic_setting.xml.flat",
+        "source": "/home/ali/AndroidProjects/StockTime/app/src/main/res/drawable/ic_setting.xml"
+    },
+    {
+        "merged": "/home/ali/AndroidProjects/StockTime/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/home/ali/AndroidProjects/StockTime/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/ali/AndroidProjects/StockTime/app/build/intermediates/res/merged/debug/mipmap-xhdpi_logo.png.flat",
+        "source": "/home/ali/AndroidProjects/StockTime/app/src/main/res/mipmap-xhdpi/logo.png"
+    },
+    {
+        "merged": "/home/ali/AndroidProjects/StockTime/app/build/intermediates/res/merged/debug/layout_activity_main.xml.flat",
+        "source": "/home/ali/AndroidProjects/StockTime/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/ali/AndroidProjects/StockTime/app/build/intermediates/res/merged/debug/drawable_ic_up.xml.flat",
+        "source": "/home/ali/AndroidProjects/StockTime/app/src/main/res/drawable/ic_up.xml"
+    },
+    {
+        "merged": "/home/ali/AndroidProjects/StockTime/app/build/intermediates/res/merged/debug/layout_activity_arangement_alphabetically.xml.flat",
+        "source": "/home/ali/AndroidProjects/StockTime/app/src/main/res/layout/activity_arangement_alphabetically.xml"
+    },
+    {
+        "merged": "/home/ali/AndroidProjects/StockTime/app/build/intermediates/res/merged/debug/drawable_round_background.xml.flat",
+        "source": "/home/ali/AndroidProjects/StockTime/app/src/main/res/drawable/round_background.xml"
+    },
+    {
+        "merged": "/home/ali/AndroidProjects/StockTime/app/build/intermediates/res/merged/debug/layout_stock_item.xml.flat",
+        "source": "/home/ali/AndroidProjects/StockTime/app/src/main/res/layout/stock_item.xml"
+    },
+    {
+        "merged": "/home/ali/AndroidProjects/StockTime/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/home/ali/AndroidProjects/StockTime/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/ali/AndroidProjects/StockTime/app/build/intermediates/res/merged/debug/drawable_ic_check.xml.flat",
+        "source": "/home/ali/AndroidProjects/StockTime/app/src/main/res/drawable/ic_check.xml"
+    },
+    {
+        "merged": "/home/ali/AndroidProjects/StockTime/app/build/intermediates/res/merged/debug/layout_stock_item_alphabetically.xml.flat",
+        "source": "/home/ali/AndroidProjects/StockTime/app/src/main/res/layout/stock_item_alphabetically.xml"
+    },
+    {
+        "merged": "/home/ali/AndroidProjects/StockTime/app/build/intermediates/res/merged/debug/layout_activity_stock_market_arangement.xml.flat",
+        "source": "/home/ali/AndroidProjects/StockTime/app/src/main/res/layout/activity_stock_market_arangement.xml"
+    },
+    {
+        "merged": "/home/ali/AndroidProjects/StockTime/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/home/ali/AndroidProjects/StockTime/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/ali/AndroidProjects/StockTime/app/build/intermediates/res/merged/debug/font_comfortaa.ttf.flat",
+        "source": "/home/ali/AndroidProjects/StockTime/app/src/main/res/font/comfortaa.ttf"
+    },
+    {
+        "merged": "/home/ali/AndroidProjects/StockTime/app/build/intermediates/res/merged/debug/drawable_ic_down.xml.flat",
+        "source": "/home/ali/AndroidProjects/StockTime/app/src/main/res/drawable/ic_down.xml"
+    },
+    {
+        "merged": "/home/ali/AndroidProjects/StockTime/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/home/ali/AndroidProjects/StockTime/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    }
+]

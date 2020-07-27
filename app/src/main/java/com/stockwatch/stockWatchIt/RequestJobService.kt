@@ -2,7 +2,6 @@ package com.stockwatch.stockWatchIt
 
 import android.app.job.JobParameters
 import android.app.job.JobService
-import android.util.Log
 
 class RequestJobService : JobService() {
 
@@ -12,10 +11,6 @@ class RequestJobService : JobService() {
     }
 
     override fun onStartJob(prams: JobParameters?): Boolean {
-        Log.d("networkingServiceLog", "RequestJobService: Job Started onStartJob()")
-/*
-        NetworkOperations().startNetworkRequest()
-*/
         return true
     }
 }

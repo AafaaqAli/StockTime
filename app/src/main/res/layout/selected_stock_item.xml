@@ -16,20 +16,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="3dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:fontFamily="@font/comfortaa"
-            android:text="Facebook"
+            android:text="@string/temp_stock"
             android:textColor="@color/green"
-            android:textSize="8dp" />
+            android:textSize="9sp" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            android:layout_marginEnd="5dp"
             android:orientation="horizontal">
 
 
@@ -44,11 +43,11 @@
                 android:id="@+id/textViewPoints"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="2dp"
+                android:layout_marginEnd="3dp"
                 android:fontFamily="@font/comfortaa"
-                android:text="200"
+                android:text="@string/temp_stockPrice"
                 android:textColor="@color/green"
-                android:textSize="8dp" />
+                android:textSize="9sp" />
 
         </LinearLayout>
     </RelativeLayout>

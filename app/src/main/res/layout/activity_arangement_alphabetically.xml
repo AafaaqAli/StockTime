@@ -1,107 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.wearable.view.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:layout_gravity="center_horizontal"
     android:orientation="vertical"
-    tools:context=".ArrangementAlphabeticallyActivity">
+    tools:context=".ArrangementAlphabeticallyActivity"
+    android:padding="15dp">
 
 
-    <TextView
-        android:id="@+id/textViewStockMarketName"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:fontFamily="@font/comfortaa"
-        android:text="NASDAK"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="15dp" />
+        android:layout_height="match_parent">
 
-    <GridLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/textViewStockMarketName"
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="3dp"
-        android:columnCount="7"
-        android:rowCount="6">
+        <TextView
+            android:id="@+id/textViewStockMarketName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comfortaa"
+            android:text="@string/nasdaq"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <com.stockwatch.stockWatchIt.AlphabetView
-            android:id="@+id/alphabetViewA"
-            android:clickable="true"/>
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:columnCount="7"
+            android:rowCount="6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewStockMarketName">
 
-        <com.stockwatch.stockWatchIt.AlphabetView android:id="@+id/alphabetViewB" />
+            <com.stockwatch.stockWatchIt.AlphabetView
+                android:id="@+id/alphabetViewA"
+                android:clickable="true"
+                android:focusable="true" />
 
-        <com.stockwatch.stockWatchIt.AlphabetView android:id="@+id/alphabetViewC" />
+            <com.stockwatch.stockWatchIt.AlphabetView android:id="@+id/alphabetViewB" />
 
-        <com.stockwatch.stockWatchIt.AlphabetView android:id="@+id/alphabetViewD" />
+            <com.stockwatch.stockWatchIt.AlphabetView android:id="@+id/alphabetViewC" />
 
-        <com.stockwatch.stockWatchIt.AlphabetView android:id="@+id/alphabetViewE" />
+            <com.stockwatch.stockWatchIt.AlphabetView android:id="@+id/alphabetViewD" />
 
-
-        <com.stockwatch.stockWatchIt.AlphabetView android:id="@+id/alphabetViewF" />
-
-        <com.stockwatch.stockWatchIt.AlphabetView android:id="@+id/alphabetViewG" />
-
-
-        <com.stockwatch.stockWatchIt.AlphabetView android:id="@+id/alphabetViewH" />
-
-
-        <com.stockwatch.stockWatchIt.AlphabetView android:id="@+id/alphabetViewI" />
+            <com.stockwatch.stockWatchIt.AlphabetView android:id="@+id/alphabetViewE" />
 
 
-        <com.stockwatch.stockWatchIt.AlphabetView android:id="@+id/alphabetViewJ" />
+            <com.stockwatch.stockWatchIt.AlphabetView android:id="@+id/alphabetViewF" />
+
+            <com.stockwatch.stockWatchIt.AlphabetView android:id="@+id/alphabetViewG" />
 
 
-        <com.stockwatch.stockWatchIt.AlphabetView android:id="@+id/alphabetViewK" />
+            <com.stockwatch.stockWatchIt.AlphabetView android:id="@+id/alphabetViewH" />
 
 
-        <com.stockwatch.stockWatchIt.AlphabetView android:id="@+id/alphabetViewL" />
+            <com.stockwatch.stockWatchIt.AlphabetView android:id="@+id/alphabetViewI" />
 
 
-        <com.stockwatch.stockWatchIt.AlphabetView android:id="@+id/alphabetViewM" />
+            <com.stockwatch.stockWatchIt.AlphabetView android:id="@+id/alphabetViewJ" />
 
 
-        <com.stockwatch.stockWatchIt.AlphabetView android:id="@+id/alphabetViewN" />
+            <com.stockwatch.stockWatchIt.AlphabetView android:id="@+id/alphabetViewK" />
 
 
-        <com.stockwatch.stockWatchIt.AlphabetView android:id="@+id/alphabetViewO" />
+            <com.stockwatch.stockWatchIt.AlphabetView android:id="@+id/alphabetViewL" />
 
 
-        <com.stockwatch.stockWatchIt.AlphabetView android:id="@+id/alphabetViewP" />
+            <com.stockwatch.stockWatchIt.AlphabetView android:id="@+id/alphabetViewM" />
 
 
-        <com.stockwatch.stockWatchIt.AlphabetView android:id="@+id/alphabetViewQ" />
+            <com.stockwatch.stockWatchIt.AlphabetView android:id="@+id/alphabetViewN" />
 
 
-        <com.stockwatch.stockWatchIt.AlphabetView android:id="@+id/alphabetViewR" />
+            <com.stockwatch.stockWatchIt.AlphabetView android:id="@+id/alphabetViewO" />
 
 
-        <com.stockwatch.stockWatchIt.AlphabetView android:id="@+id/alphabetViewS" />
+            <com.stockwatch.stockWatchIt.AlphabetView android:id="@+id/alphabetViewP" />
 
 
-        <com.stockwatch.stockWatchIt.AlphabetView android:id="@+id/alphabetViewT" />
+            <com.stockwatch.stockWatchIt.AlphabetView android:id="@+id/alphabetViewQ" />
 
 
-        <com.stockwatch.stockWatchIt.AlphabetView android:id="@+id/alphabetViewU" />
+            <com.stockwatch.stockWatchIt.AlphabetView android:id="@+id/alphabetViewR" />
 
 
-        <com.stockwatch.stockWatchIt.AlphabetView android:id="@+id/alphabetViewV" />
+            <com.stockwatch.stockWatchIt.AlphabetView android:id="@+id/alphabetViewS" />
 
 
-        <com.stockwatch.stockWatchIt.AlphabetView android:id="@+id/alphabetViewW" />
+            <com.stockwatch.stockWatchIt.AlphabetView android:id="@+id/alphabetViewT" />
 
 
-        <com.stockwatch.stockWatchIt.AlphabetView android:id="@+id/alphabetViewX" />
-
-        <com.stockwatch.stockWatchIt.AlphabetView android:id="@+id/alphabetViewY" />
+            <com.stockwatch.stockWatchIt.AlphabetView android:id="@+id/alphabetViewU" />
 
 
-        <com.stockwatch.stockWatchIt.AlphabetView android:id="@+id/alphabetViewZ" />
+            <com.stockwatch.stockWatchIt.AlphabetView android:id="@+id/alphabetViewV" />
 
-    </GridLayout>
 
-</RelativeLayout>
+            <com.stockwatch.stockWatchIt.AlphabetView android:id="@+id/alphabetViewW" />
+
+
+            <com.stockwatch.stockWatchIt.AlphabetView android:id="@+id/alphabetViewX" />
+
+            <com.stockwatch.stockWatchIt.AlphabetView android:id="@+id/alphabetViewY" />
+
+
+            <com.stockwatch.stockWatchIt.AlphabetView android:id="@+id/alphabetViewZ" />
+
+        </GridLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</android.support.wearable.view.BoxInsetLayout>

@@ -1,11 +1,15 @@
 <resources>
     <string name="app_name">StockWatchIt</string>
-    <!--
-    This string is used for square devices and overridden by hello_world in
-    values-round/strings.xml for round devices.
-    -->
-    <string name="hello_world">Hello Square World!</string>
     <string name="no_item_added">No item added yet</string>
     <string name="no_item">No item found</string>
     <string name="sorted_activity">Sorted Stocks</string>
+    <string name="nasdaq">NASDAQ</string>
+    <string name="tsx">TSX</string>
+    <string name="temp_stock">facebook</string>
+    <string name="temp_stockPrice">2000</string>
+    <string name="nyse">NYSE</string>
+    <string name="favourite">FAVOURITES</string>
+    <string name="temp_time">12:18PM</string>
+    <string name="stock_markets">Stock Markets</string>
+    <string name="tempAlphabet">A</string>
 </resources>

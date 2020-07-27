@@ -4,7 +4,7 @@ import android.content.Context
 
 class Constants {
     companion object {
-        /*==================================== ETC ========================================*/
+        /*==================================== API and Extras ========================================*/
         const val API_TOKEN = "bs3m6jfrh5r9llvji8sg"
         lateinit var Context: Context
         var isFirstRun: Boolean = false
@@ -14,11 +14,6 @@ class Constants {
         const val JOB_SERVICE_ID = 110
         const val JOB_REQUEST_RESTART_INTERVAL: Long = 1000 * 60 * 15 //15 minutes
         const val RESTART_INTERVAL: Long = 1000 * 60//1 minute
-
-
-        /*================================= Room DB ===================================*/
-        const val TABLE_NAME = "raw_symbol_table"
-        const val DB_NAME = "raw_stock_db"
 
         /*================================ Stock Markets ==============================*/
         const val FAVOURITE = 0

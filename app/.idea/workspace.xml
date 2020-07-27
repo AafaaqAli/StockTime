@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config>
+        <device id="wear_square_240" />
+      </config>
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="debug" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d8ef7bfb-1454-4cb5-9870-502d81f8bb29" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlinx_kotlinx_coroutines_core_1_3_8_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/dictionaries/ali.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/dictionaries/ali.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/runConfigurations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/runConfigurations.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_room_room_common_2_2_3_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_room_room_runtime_2_2_3_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_sqlite_sqlite_2_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_sqlite_sqlite_framework_2_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlinx_kotlinx_coroutines_core_1_3_7_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/release/StockTime_Alpha-1.1.apk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/release/output.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/stockwatch/stockWatchIt/AlphabetView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stockwatch/stockWatchIt/AlphabetView.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/stockwatch/stockWatchIt/ArrangementAlphabeticallyActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stockwatch/stockWatchIt/ArrangementAlphabeticallyActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/stockwatch/stockWatchIt/Constants.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stockwatch/stockWatchIt/Constants.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/stockwatch/stockWatchIt/HelperClass.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stockwatch/stockWatchIt/HelperClass.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/stockwatch/stockWatchIt/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stockwatch/stockWatchIt/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/stockwatch/stockWatchIt/NetworkOperations.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stockwatch/stockWatchIt/NetworkOperations.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/stockwatch/stockWatchIt/NetworkingHelperClass.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stockwatch/stockWatchIt/NetworkingHelperClass.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/stockwatch/stockWatchIt/RawStock.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stockwatch/stockWatchIt/RawStock.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/stockwatch/stockWatchIt/RequestJobService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stockwatch/stockWatchIt/RequestJobService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/stockwatch/stockWatchIt/SelectedStockAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stockwatch/stockWatchIt/SelectedStockAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/stockwatch/stockWatchIt/Stock.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stockwatch/stockWatchIt/Stock.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/stockwatch/stockWatchIt/StockAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stockwatch/stockWatchIt/StockAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/stockwatch/stockWatchIt/StockApplicationClass.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stockwatch/stockWatchIt/StockApplicationClass.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/stockwatch/stockWatchIt/StocksActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stockwatch/stockWatchIt/StocksActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_arangement_alphabetically.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_arangement_alphabetically.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_stock_market_arangement.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_stock_market_arangement.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_stocks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_stocks.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/selected_stock_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/selected_stock_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/stock_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/stock_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/stock_item_alphabetically.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/stock_item_alphabetically.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values/strings.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Android_Wear_Square_API_25" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/..">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="StockTime" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="StockTime" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="StockTime" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="StockTime" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build setup" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="StockTime" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="StockTime" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="StockTime" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="android" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="StockTime" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="EXPORT_PRIVATE_KEY" value="false" />
+    <option name="KEY_STORE_PATH" value="/media/ali/Data/StockTimeKey.jks" />
+    <option name="KEY_ALIAS" value="key0" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="working-branch" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1epb8GNRvBOAR31UvypaLxswMnS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ApkExportedModule" value="app" />
+    <property name="BundleExportedModule" value="app" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Android_Wear_Square_API_25" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-07-20T21:09:38.255Z" />
+    <property name="ExportApk.ApkPath" value="$PROJECT_DIR$" />
+    <property name="ExportApk.BuildVariants" value="release" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunManager" selected="Android App.app">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="/home/ali/AndroidStudioProjects/StockTime [buildDependents]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/.." />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="buildDependents" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="/home/ali/AndroidStudioProjects/StockTime [bundle]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/.." />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="bundle" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="/home/ali/AndroidStudioProjects/StockTime [wrapper]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/.." />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="wrapper" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="app [assemble]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="assemble" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="app [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.app [build]" />
+        <item itemvalue="Gradle.app [assemble]" />
+        <item itemvalue="Gradle./home/ali/AndroidStudioProjects/StockTime [bundle]" />
+        <item itemvalue="Gradle./home/ali/AndroidStudioProjects/StockTime [buildDependents]" />
+        <item itemvalue="Gradle./home/ali/AndroidStudioProjects/StockTime [wrapper]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d8ef7bfb-1454-4cb5-9870-502d81f8bb29" name="Default Changelist" comment="" />
+      <created>1595021321956</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1595021321956</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="258" y="121" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595021367822">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="258" y="121" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1600.873@0.27.1600.873" timestamp="1595021367822" />
+    <state x="578" y="320" width="424" height="490" key="FileChooserDialogImpl" timestamp="1595514333618">
+      <screen x="0" y="30" width="1600" height="870" />
+    </state>
+    <state x="578" y="318" width="424" height="491" key="FileChooserDialogImpl/0.27.1600.873@0.27.1600.873" timestamp="1595071306155" />
+    <state x="578" y="320" width="424" height="490" key="FileChooserDialogImpl/0.30.1600.870@0.30.1600.870" timestamp="1595514333618" />
+    <state width="1558" height="76" key="GridCell.Tab.0.bottom" timestamp="1595796592038">
+      <screen x="0" y="30" width="1600" height="870" />
+    </state>
+    <state width="1558" height="325" key="GridCell.Tab.0.bottom/0.27.1600.873@0.27.1600.873" timestamp="1595068246606" />
+    <state width="1558" height="76" key="GridCell.Tab.0.bottom/0.30.1600.870@0.30.1600.870" timestamp="1595796592038" />
+    <state width="1558" height="76" key="GridCell.Tab.0.center" timestamp="1595796592038">
+      <screen x="0" y="30" width="1600" height="870" />
+    </state>
+    <state width="1558" height="325" key="GridCell.Tab.0.center/0.27.1600.873@0.27.1600.873" timestamp="1595068246605" />
+    <state width="1558" height="76" key="GridCell.Tab.0.center/0.30.1600.870@0.30.1600.870" timestamp="1595796592038" />
+    <state width="1558" height="76" key="GridCell.Tab.0.left" timestamp="1595796592037">
+      <screen x="0" y="30" width="1600" height="870" />
+    </state>
+    <state width="1558" height="325" key="GridCell.Tab.0.left/0.27.1600.873@0.27.1600.873" timestamp="1595068246604" />
+    <state width="1558" height="76" key="GridCell.Tab.0.left/0.30.1600.870@0.30.1600.870" timestamp="1595796592037" />
+    <state width="1558" height="76" key="GridCell.Tab.0.right" timestamp="1595796592038">
+      <screen x="0" y="30" width="1600" height="870" />
+    </state>
+    <state width="1558" height="325" key="GridCell.Tab.0.right/0.27.1600.873@0.27.1600.873" timestamp="1595068246605" />
+    <state width="1558" height="76" key="GridCell.Tab.0.right/0.30.1600.870@0.30.1600.870" timestamp="1595796592038" />
+    <state x="311" y="100" width="977" height="736" key="SettingsEditor" timestamp="1595324545355">
+      <screen x="0" y="30" width="1600" height="870" />
+    </state>
+    <state x="311" y="100" width="977" height="736" key="SettingsEditor/0.30.1600.870@0.30.1600.870" timestamp="1595324545355" />
+    <state x="395" y="201" width="800" height="534" key="Vcs.Push.Dialog.v2" timestamp="1595327316132">
+      <screen x="0" y="30" width="1600" height="870" />
+    </state>
+    <state x="395" y="199" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1600.873@0.27.1600.873" timestamp="1595068349529" />
+    <state x="395" y="201" width="800" height="534" key="Vcs.Push.Dialog.v2/0.30.1600.870@0.30.1600.870" timestamp="1595327316132" />
+    <state x="185" y="33" width="1200" height="630" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1595841040832">
+      <screen x="0" y="30" width="1600" height="870" />
+    </state>
+    <state x="185" y="33" width="1200" height="630" key="com.android.tools.idea.avdmanager.AvdListDialog/0.30.1600.870@0.30.1600.870" timestamp="1595841040832" />
+    <state x="493" y="292" key="com.intellij.ide.util.TipDialog" timestamp="1595340963288">
+      <screen x="0" y="30" width="1600" height="870" />
+    </state>
+    <state x="493" y="292" key="com.intellij.ide.util.TipDialog/0.30.1600.870@0.30.1600.870" timestamp="1595340963288" />
+  </component>
+</project>

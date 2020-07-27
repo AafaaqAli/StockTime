@@ -15,15 +15,6 @@ import com.stockwatch.stocks.Constants
 class NetworkingHelperClass(context: Context) {
      private var mContext: Context = context
 
-    fun startJob(){
-        if(HelperClass.isJobServiceOn(mContext)){
-            Log.d("networkingServiceLog", "NetworkingHelperClass: Job service already running")
-        }else{
-            Log.d("networkingServiceLog", "RequestJobService: Starting Job Service")
-            scheduleJob(true)
-        }
-    }
-
     fun cancelJob(){
         if(!HelperClass.isJobServiceOn(mContext)){
             scheduleJob(false)
@@ -42,16 +33,16 @@ class NetworkingHelperClass(context: Context) {
         val componentName = ComponentName(mContext, RequestJobService::class.java )
 
         if(setEnable){
-            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.N){
-                jobInfo = JobInfo.Builder(Constants.JOB_SERVICE_ID, componentName)
-                    .setMinimumLatency(Constants.JOB_REQUEST_RESTART_INTERVAL)
-                    .setPersisted(true)
-                    .build()
+            jobInfo = if (Build.VERSION.SDK_INT < Build.VERSION_CODES.N){
+                JobInfo.Builder(Constants.JOB_SERVICE_ID, componentName)
+                        .setMinimumLatency(Constants.JOB_REQUEST_RESTART_INTERVAL)
+                        .setPersisted(true)
+                        .build()
             } else {
-                jobInfo = JobInfo.Builder(Constants.JOB_SERVICE_ID, componentName)
-                    .setPeriodic(5000)
-                    .setPersisted(true)
-                    .build()
+                JobInfo.Builder(Constants.JOB_SERVICE_ID, componentName)
+                        .setPeriodic(5000)
+                        .setPersisted(true)
+                        .build()
             }
 
             jobResult =  jobScheduler.schedule(jobInfo)

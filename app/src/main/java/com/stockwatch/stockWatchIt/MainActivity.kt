@@ -8,7 +8,6 @@ import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.androidnetworking.AndroidNetworking
 import com.stockwatch.stocks.Constants
-import com.stockwatch.stocks.StockApplicationClass
 import com.jacksonandroidnetworking.JacksonParserFactory
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.Dispatchers
@@ -18,18 +17,18 @@ import kotlinx.coroutines.launch
 
 
 class MainActivity : WearableActivity() {
-    lateinit var networkingHelperClass: NetworkingHelperClass
+    private lateinit var networkingHelperClass: NetworkingHelperClass
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         if(HelperClass.isInternetAvailable(this)){
-            AndroidNetworking.initialize(applicationContext);
+            AndroidNetworking.initialize(applicationContext)
             AndroidNetworking.setParserFactory(JacksonParserFactory())
 
         }
         networkingHelperClass = NetworkingHelperClass(this)
-        Constants.Context = applicationContext
+        Constants.Context = this.applicationContext
         openSetting()
     }
 
@@ -42,7 +41,6 @@ class MainActivity : WearableActivity() {
 
 
     private fun initAdapter() {
-        /*set adapter here*/
         recyclerViewSelectedStock.layoutManager = LinearLayoutManager(this)
         recyclerViewSelectedStock.adapter = SelectedStockAdapter(
             this,

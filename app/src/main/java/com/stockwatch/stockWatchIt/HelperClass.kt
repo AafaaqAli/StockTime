@@ -6,6 +6,7 @@ import android.net.ConnectivityManager
 import com.stockwatch.stocks.Constants
 
 
+@Suppress("DEPRECATION")
 class HelperClass {
     companion object{
         fun isJobServiceOn(context: Context): Boolean{

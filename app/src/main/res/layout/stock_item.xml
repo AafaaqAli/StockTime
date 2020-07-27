@@ -8,6 +8,7 @@
 
 
     <RelativeLayout
+
         android:background="#454444"
         android:id="@+id/relativeLayoutStockItem"
         android:layout_width="match_parent"
@@ -21,10 +22,10 @@
             android:layout_gravity="center"
             android:layout_margin="3dp"
             android:fontFamily="@font/comfortaa"
-            android:text="Facebook"
+            android:text="@string/temp_stock"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="9dp"
+            android:textSize="12sp"
             android:textStyle="bold" />
 
         <ImageView

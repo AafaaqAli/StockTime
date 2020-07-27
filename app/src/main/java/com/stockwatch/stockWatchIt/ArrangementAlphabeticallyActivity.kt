@@ -3,13 +3,12 @@ package com.stockwatch.stockWatchIt
 import android.content.Intent
 import android.os.Bundle
 import android.support.wearable.activity.WearableActivity
-import android.util.Log
 import android.view.View
 import kotlinx.android.synthetic.main.activity_arangement_alphabetically.*
 
 class ArrangementAlphabeticallyActivity : WearableActivity(), View.OnClickListener {
-    var stockMarketID: Int = -1
-    var stockMarketName: String = ""
+    private var stockMarketID: Int = -1
+    private var stockMarketName: String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,7 +16,7 @@ class ArrangementAlphabeticallyActivity : WearableActivity(), View.OnClickListen
         initAlphabetViews()
         getIntentData()
 
-        textViewStockMarketName.setText(stockMarketName)
+        textViewStockMarketName.text = stockMarketName
     }
 
 
@@ -140,10 +139,6 @@ class ArrangementAlphabeticallyActivity : WearableActivity(), View.OnClickListen
     override fun onClick(view: View?) {
         val intent = Intent(this, StocksActivity::class.java)
         intent.putExtra("stockListID", stockMarketID)
-
-        /*------------------------------tag-------------------------------*/
-        Log.d("LogAlpabet", view!!.tag.toString())
-        /*----------------------------------------------------------------*/
         intent.putExtra("stockListAlphabet", view!!.tag.toString())
         startActivity(intent)
     }
